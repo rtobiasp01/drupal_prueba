@@ -1,21 +1,39 @@
-# Dependencies managed by Composer.
-/recipes
+# --- Drupal Core & Contrib (Gestionado por Composer) ---
+# No subimos el código de terceros, solo el nuestro en /custom
+/web/core
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+/web/libraries
 /vendor
 
-settings.php
-settings.local.php
-/sites/default/files
+# --- Archivos de Configuración Sensibles ---
+# Ignoramos los settings que contienen contraseñas de DB
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+/web/sites/*/services.yml
+/web/sites/*/services.local.yml
 
-# macOS
+# Excepción: Queremos trackear el archivo de ejemplo para nuevos devs
+!/web/sites/default/default.settings.php
+!/web/sites/default/default.services.yml
+
+# --- Archivos Generados por el Usuario ---
+# Nunca subas imágenes, PDFs o estilos CSS generados (agregados)
+/web/sites/*/files
+/web/sites/*/private
+
+# --- Herramientas de Desarrollo y Entorno ---
+.env
+.env.local
+/drush/sites/*.site.yml
+.idea/
+.vscode/
+
+# --- Recetas de Drupal (Si usas Drupal 10.3+) ---
+/web/recipes/contrib
+
+# --- Archivos del Sistema (OS) ---
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-.Spotlight-V100
-.Trashes
-
-# Windows
 Thumbs.db
 ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
