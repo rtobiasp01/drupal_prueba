@@ -1,0 +1,9 @@
+uuid: 3f72e70a-382f-4e73-83fb-861008aa00a3
+langcode: es
+status: true
+dependencies: {  }
+name: Drupical
+configEntityTypeId: component
+weight: 0
+items:
+  - block.events_block

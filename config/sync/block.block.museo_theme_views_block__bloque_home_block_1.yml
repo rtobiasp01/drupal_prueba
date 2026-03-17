@@ -1,0 +1,29 @@
+uuid: bf960b89-c91f-40e8-a471-52cb13be1ba5
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bloque_home
+  module:
+    - system
+    - views
+  theme:
+    - museo_theme
+id: museo_theme_views_block__bloque_home_block_1
+theme: museo_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:bloque_home-block_1'
+settings:
+  id: 'views_block:bloque_home-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

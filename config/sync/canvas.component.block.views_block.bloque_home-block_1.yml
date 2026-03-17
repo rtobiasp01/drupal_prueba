@@ -1,0 +1,26 @@
+uuid: 0f743022-8179-407b-9a0b-34a930b4ac60
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.bloque_home
+  module:
+    - views
+active_version: c7b2517297da3946
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:bloque_home-block_1'
+        label: 'Bloque Home: Block'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Bloque Home: Block'
+id: block.views_block.bloque_home-block_1
+provider: views
+source: block
+source_local_id: 'views_block:bloque_home-block_1'

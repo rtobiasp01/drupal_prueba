@@ -1,0 +1,9 @@
+uuid: 40298759-8729-4fae-a027-d80e08c848ac
+langcode: es
+status: true
+dependencies: {  }
+name: Bloque
+configEntityTypeId: component
+weight: 0
+items:
+  - block.dashboard_placeholder

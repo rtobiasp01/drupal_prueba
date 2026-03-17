@@ -1,0 +1,20 @@
+uuid: 0174d2c1-58f7-475f-807d-ca7e8289482d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.medium
+    - media.type.svg_image
+_core:
+  default_config_hash: TAe9U8S5-70QgYJVIj4Wuj_b9RzRS_no_MWLMxmcL0Q
+id: media.svg_image.medium
+targetEntityType: media
+bundle: svg_image
+mode: medium
+content: {  }
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

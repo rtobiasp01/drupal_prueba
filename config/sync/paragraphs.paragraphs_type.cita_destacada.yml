@@ -1,0 +1,10 @@
+uuid: 297d35b1-8835-4f26-8430-fe2f875f2ef5
+langcode: es
+status: true
+dependencies: {  }
+id: cita_destacada
+label: 'Cita Destacada'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,17 @@
+uuid: 1e0ccaeb-7dc1-4831-8f30-aee381b5a722
+langcode: es
+status: true
+dependencies: {  }
+name: Menús
+configEntityTypeId: component
+weight: 0
+items:
+  - block.system_menu_block.account
+  - block.system_menu_block.admin
+  - block.system_menu_block.content
+  - block.system_menu_block.footer
+  - block.system_menu_block.main
+  - block.system_menu_block.menu-header
+  - block.system_menu_block.navigation-user-links
+  - block.system_menu_block.tools
+  - block.system_menu_block.top-tasks

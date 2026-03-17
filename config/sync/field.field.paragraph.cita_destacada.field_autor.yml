@@ -1,0 +1,19 @@
+uuid: 993fa24b-3ede-4251-96e6-a0c3c35c5be2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_autor
+    - paragraphs.paragraphs_type.cita_destacada
+id: paragraph.cita_destacada.field_autor
+field_name: field_autor
+entity_type: paragraph
+bundle: cita_destacada
+label: Autor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

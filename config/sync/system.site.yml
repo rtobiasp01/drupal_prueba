@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+langcode: es
+uuid: 71407359-2385-42c8-886d-613df2d0b1b2
+name: 'Prueba Drupal'
+mail: rtobiasp01@larioja.edu.es
+slogan: ''
+page:
+  403: /user/login
+  404: ''
+  front: /node/7
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: es
+mail_notification: null

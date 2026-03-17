@@ -1,0 +1,19 @@
+uuid: 1a754966-f6db-4ee4-b503-76e66f91da05
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion
+    - node.type.obra
+id: node.obra.field_descripcion
+field_name: field_descripcion
+entity_type: node
+bundle: obra
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

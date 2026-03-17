@@ -1,0 +1,23 @@
+uuid: 1cb26244-9dc9-42bb-a3b8-fa104a1c7592
+langcode: es
+status: false
+dependencies:
+  module:
+    - search
+active_version: 223b6213cc972bc9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: search_form_block
+        label: 'Formulario de búsqueda'
+        label_display: '0'
+        provider: search
+        page_id: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Formulario de búsqueda'
+id: block.search_form_block
+provider: search
+source: block
+source_local_id: search_form_block

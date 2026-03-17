@@ -1,0 +1,41 @@
+uuid: 2a0186ef-ef77-4941-b451-6af4b7305fd5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.pagina_de_exposicion.field_componentes
+    - field.field.node.pagina_de_exposicion.field_imagen_principal
+    - node.type.pagina_de_exposicion
+  module:
+    - entity_reference_revisions
+    - user
+id: node.pagina_de_exposicion.default
+targetEntityType: node
+bundle: pagina_de_exposicion
+mode: default
+content:
+  field_componentes:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_imagen_principal:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 16_9_large
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

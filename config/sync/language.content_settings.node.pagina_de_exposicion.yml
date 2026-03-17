@@ -1,0 +1,11 @@
+uuid: 5c682db8-a9ef-444d-b581-84c2d1e3706b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.pagina_de_exposicion
+id: node.pagina_de_exposicion
+target_entity_type_id: node
+target_bundle: pagina_de_exposicion
+default_langcode: site_default
+language_alterable: false

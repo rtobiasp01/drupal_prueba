@@ -1,0 +1,32 @@
+uuid: 7268c6ea-71d5-4276-b424-6c36354f2563
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cita_destacada.field_autor
+    - field.field.paragraph.cita_destacada.field_cita
+    - paragraphs.paragraphs_type.cita_destacada
+id: paragraph.cita_destacada.default
+targetEntityType: paragraph
+bundle: cita_destacada
+mode: default
+content:
+  field_autor:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cita:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

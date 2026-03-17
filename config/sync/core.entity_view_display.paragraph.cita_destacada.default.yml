@@ -1,0 +1,29 @@
+uuid: ffe3464a-7e7c-4b3c-8e6c-85709d65e62d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cita_destacada.field_autor
+    - field.field.paragraph.cita_destacada.field_cita
+    - paragraphs.paragraphs_type.cita_destacada
+id: paragraph.cita_destacada.default
+targetEntityType: paragraph
+bundle: cita_destacada
+mode: default
+content:
+  field_autor:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cita:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

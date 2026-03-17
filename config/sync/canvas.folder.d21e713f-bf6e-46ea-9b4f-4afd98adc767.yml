@@ -1,0 +1,9 @@
+uuid: d21e713f-bf6e-46ea-9b4f-4afd98adc767
+langcode: es
+status: true
+dependencies: {  }
+name: 'Panel de control'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.dashboard_site_status

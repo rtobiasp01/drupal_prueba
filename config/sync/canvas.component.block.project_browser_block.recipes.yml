@@ -1,0 +1,27 @@
+uuid: 445650c3-0744-4703-9825-efb3b501fd86
+langcode: es
+status: true
+dependencies:
+  module:
+    - project_browser
+active_version: b9e29c3ad318cf53
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'project_browser_block:recipes'
+        label: Recetas
+        label_display: '0'
+        provider: project_browser
+        paginate: true
+        page_sizes: '12, 24, 36, 48'
+        sort_options: null
+        default_sort: null
+        filters: null
+    fallback_metadata:
+      slot_definitions: null
+label: Recetas
+id: block.project_browser_block.recipes
+provider: project_browser
+source: block
+source_local_id: 'project_browser_block:recipes'

@@ -1,0 +1,10 @@
+uuid: 19451135-7d71-42fb-a797-3974d76c6169
+langcode: es
+status: true
+dependencies: {  }
+name: 'Listas (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.bloque_home-block_1
+  - block.views_block.selector_de_obras-block_1

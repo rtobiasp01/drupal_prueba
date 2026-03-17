@@ -1,0 +1,18 @@
+uuid: e84185b6-95ef-4301-b69c-e3aeb268e092
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.obra
+id: node.obra.title
+field_name: title
+entity_type: node
+bundle: obra
+label: 'Título de la Obra'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
