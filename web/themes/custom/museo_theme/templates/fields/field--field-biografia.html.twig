@@ -1,0 +1,12 @@
+<div{{attributes.addClass('campo-biografia')}}>
+	{% if not label_hidden %}
+		<div{{title_attributes.addClass('etiqueta-personalizada-estilo')}}>
+			{{ label }}
+		</div>
+	{% endif %}
+	<div{{content_attributes.addClass('contenido-biografia')}}>
+		{% for item in items %}
+			<div>{{ item.content }}</div>
+		{% endfor %}
+	</div>
+</div>

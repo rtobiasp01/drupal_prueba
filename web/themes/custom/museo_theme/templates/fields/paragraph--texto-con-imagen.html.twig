@@ -1,0 +1,22 @@
+{# Archivo: paragraph--texto-con-imagen.html.twig #}
+{# Usamos flex-container para usar Flexbox o Grid en tu CSS #}
+{%
+  set classes = [
+    'componente-texto-imagen',
+    'flex-container'
+  ]
+%}
+	<div{{attributes.addClass(classes)}}>
+
+		<div
+		class="columna-texto"> {# Renderizamos solo el campo de texto #}
+		{{ content.field_texto_columna }}
+	</div>
+
+	<div
+		class="columna-imagen">
+		{# Renderizamos solo el campo de imagen #}
+		{{ content.field_imagen_columna }}
+	</div>
+
+</div>

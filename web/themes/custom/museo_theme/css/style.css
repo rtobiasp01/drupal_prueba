@@ -1,0 +1,433 @@
+/* ==========================================================================
+   1. ESTILOS GLOBALES
+   ========================================================================== */
+body {
+    background-color: #091b39;
+    color: #ffffff;
+}
+
+p {
+    color: rgb(9, 27, 57);
+    font-size: 20px;
+}
+
+/* ==========================================================================
+   2. VISTAS: GALERÍA (.path-galeria)
+   ========================================================================== */
+.path-galeria .view-content {
+    margin-top: 20px;
+}
+
+.path-galeria .views-field-title a {
+    color: #e67e22;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.path-galeria .views-field-title a:hover {
+    color: #ffffff;
+}
+
+.path-galeria label[for="edit-field-tecnica-target-id"] {
+    display: block;
+    margin-bottom: 8px;
+    color: #8e44ad;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.path-galeria .form-select {
+    width: 20em;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: medium;
+}
+
+/* ==========================================================================
+   3. TIPO DE CONTENIDO: ARTISTA (Ficha de Museo)
+   ========================================================================== */
+.artista-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: #11284d;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.artista-col-imagen {
+    flex: 0 0 380px;
+}
+
+.page-node-type-artista .artista-col-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid #347efe;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.page-node-type-artista .artista-col-imagen img:hover {
+    transform: translateY(-5px);
+}
+
+.artista-col-info {
+    flex: 1;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campo-biografia,
+.campo-fecha {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #e67e22;
+    transition: background 0.3s ease;
+}
+
+.campo-biografia:hover,
+.campo-fecha:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.etiqueta-personalizada-estilo {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #e67e22;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+}
+
+.contenido-biografia,
+.contenido-fecha {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.contenido-biografia p,
+.contenido-biografia div {
+    margin-bottom: 0;
+}
+
+.contenido-fecha time {
+    font-size: 1.3rem;
+    color: #347efe;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   4. CABECERA (HEADER)
+   ========================================================================== */
+.region-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-logo {
+    width: 6rem;
+}
+
+.header-logo-link {
+    display: inline-block;
+}
+
+.branding img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.btn-galeria {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-galeria:hover {
+    background-color: #1f2937;
+}
+
+.componente-texto-imagen {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.componente-texto-imagen .columna-texto {
+    width: 100%;
+    text-align: center;
+}
+
+.componente-texto-imagen .columna-imagen {
+    width: 100%;
+    max-height: 600px;
+    max-width: 400px;
+}
+
+/* ==========================================================================
+   5. RESPONSIVE (MÓVILES)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .artista-container {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .artista-col-imagen {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+.page-node-type-pagina-de-exposicion {
+    background-color: #FFFFFF;
+    color: #091B39;
+    overflow-x: hidden;
+    --exposicion-gutter: clamp(12px, 3.2vw, 40px);
+    --exposicion-max-width: 1080px;
+}
+
+.page-node-type-pagina-de-exposicion .region-header {
+    width: min(calc(100% - (var(--exposicion-gutter) * 2)), var(--exposicion-max-width));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-node-type-pagina-de-exposicion h2 {
+    font-size: 30px;
+    padding-bottom: 9px;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   Componente: Carrusel de Fotos (Splide)
+   ========================================= */
+.mi-carrusel-componente {
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.page-node-type-pagina-de-exposicion .mi-carrusel-componente {
+    /* En lugar de un ancho fijo de 90vw, usamos el ancho dinámico del sitio */
+    width: min(calc(100% - (var(--exposicion-gutter) * 2)), var(--exposicion-max-width));
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    /* Eliminamos el centrado forzado anterior */
+}
+
+.carrusel-titulo {
+    font-size: 30px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.splide__slide {
+    overflow: hidden;
+    border-radius: 8px;
+    /* Un poco más de redondeado queda más moderno */
+}
+
+.splide__slide img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.splide__slide:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   Componente: Hero Banner (Pantalla Completa)
+   ========================================= */
+.page-node-type-pagina-de-exposicion header[role="banner"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.page-node-type-pagina-de-exposicion .layout-container .container.mx-auto.px-4.pb-4 {
+    display: none;
+}
+
+.page-node-type-pagina-de-exposicion nav[aria-label="breadcrumb"],
+.page-node-type-pagina-de-exposicion #system-breadcrumb,
+.page-node-type-pagina-de-exposicion .page-title,
+.page-node-type-pagina-de-exposicion .block-page-title-block {
+    display: none;
+}
+
+.hero-imagen-principal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hero-imagen-principal>.field,
+.hero-imagen-principal>.field .field__item,
+.hero-imagen-principal>.field picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+}
+
+.hero-imagen-principal>.field {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-imagen-principal img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+.hero-imagen-principal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: min(calc(100% - (var(--exposicion-gutter) * 2)), var(--exposicion-max-width));
+    max-width: none;
+}
+
+.hero-titulo {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-exposicion {
+    position: relative;
+    z-index: 10;
+    margin: 100vh auto 0 auto;
+    width: min(calc(100% - (var(--exposicion-gutter) * 2)), var(--exposicion-max-width));
+    max-width: none;
+    background-color: #ffffff;
+    padding: 3rem 0;
+}
+
+/* =========================================
+   Componente: Cita Destacada
+   ========================================= */
+.bloque-cita {
+    margin: 4rem 0;
+    padding: 0 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.cita-texto {
+    font-family: serif;
+    /* O la fuente elegante de tu tema */
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #CED1D7;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+}
+
+/* Comillas decorativas */
+.cita-texto::before {
+    content: '\201C';
+    font-size: 7rem;
+    color: #CED1D7;
+    position: absolute;
+    top: -3rem;
+    left: -0.2em;
+    transform: translateX(-50%);
+}
+
+.cita-autor {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    color: #8e44ad;
+}
+
+@media (max-width: 768px) {
+    .cita-texto {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .slide-item {
+        flex: 0 0 calc(33.333% - 14px);
+    }
+
+    .slide-item img {
+        height: 320px;
+    }
+}

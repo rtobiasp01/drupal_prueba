@@ -1,0 +1,24 @@
+{# Archivo: node--pagina-de-exposicion.html.twig #}
+<article
+	class="pagina-exposicion-completa">
+
+	{# Contenedor principal de la imagen que ocupará toda la pantalla #}
+	<div
+		class="hero-imagen-principal">
+
+		{# La imagen de fondo #}
+		{{ content.field_imagen_principal }}
+
+		{# El título superpuesto en la esquina inferior izquierda #}
+		<div class="hero-overlay">
+			<h1 class="hero-titulo">{{ label }}</h1>
+		</div>
+
+	</div>
+
+	{# El resto del contenido (Párrafos) #}
+	<div class="contenido-exposicion">
+		{{ content|without('field_imagen_principal', 'links') }}
+	</div>
+
+</article>

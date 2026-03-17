@@ -1,0 +1,25 @@
+<article{{attributes.addClass('nodo-artista')}}>
+	{{ title_prefix }}
+	{{ title_suffix }}
+
+	<div
+		class="artista-container">
+		{# Columna Izquierda: Imagen #}
+		<div class="artista-col-imagen">
+			{{ content.field_foto_artista }}
+		</div>
+
+		{# Columna Derecha: Biografía y Fecha #}
+		<div class="artista-col-info">
+			<div class="info-wrapper">
+				{{ content.field_biografia }}
+				{{ content.field_fecha_de_nacimiento }}
+			</div>
+		</div>
+	</div>
+
+	{# Pintar el resto del contenido si hubiera más campos ocultos #}
+	<div class="rest-of-content">
+		{{ content|without('field_foto_artista', 'field_biografia', 'field_fecha_de_nacimiento') }}
+	</div>
+</article>

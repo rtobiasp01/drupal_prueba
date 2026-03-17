@@ -1,0 +1,67 @@
+{# 3. CONTENEDOR PRINCIPAL Y ATRIBUTOS GLOBALES #}
+<article{{attributes.addClass(classes,'page-node-type-artista')}}>
+
+	{# 4. ELEMENTOS OBLIGATORIOS DEL SISTEMA #}
+	{{ title_prefix }}
+	{{ title_suffix }}
+
+	{# 5. DISEÑO PERSONALIZADO: FICHA DE MUSEO #}
+	<div
+		class="artista-container">
+
+		{# Columna Izquierda: Imagen #}
+		<div class="artista-col-imagen">
+			{{ content.field_imagen_de_la_obra }}
+		</div>
+
+		{# Columna Derecha: Información detallada #}
+		<div class="artista-col-info">
+			<div
+				class="info-wrapper">
+
+				{# Descripción / Biografía #}
+				{% if content.field_descripcion|render %}
+					<div class="campo-biografia">
+						<div class="contenido-biografia">
+							{{ content.field_descripcion }}
+						</div>
+					</div>
+				{% endif %}
+
+				{# Autor #}
+				{% if content.field_autor|render %}
+					<div class="campo-fecha">
+						<div class="contenido-fecha">
+							{{ content.field_autor }}
+						</div>
+					</div>
+				{% endif %}
+
+				{# Técnica #}
+				{% if content.field_tecnica|render %}
+					<div class="campo-fecha">
+						<div class="contenido-fecha">
+							{{ content.field_tecnica }}
+						</div>
+					</div>
+				{% endif %}
+
+				{# Año de creación #}
+				{% if content.field_ano_de_creacion|render %}
+					<div class="campo-fecha">
+						<div class="contenido-fecha">
+							{{ content.field_ano_de_creacion }}
+						</div>
+					</div>
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+
+	{# 6. EL RESTO DEL CONTENIDO (Campos adicionales) #}
+	<div class="artista-extras">
+		{{ content|without('field_imagen_de_la_obra', 'field_descripcion', 'field_ano_de_creacion', 'field_tecnica', 'field_autor') }}
+	</div>
+
+</article>

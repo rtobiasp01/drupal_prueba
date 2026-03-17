@@ -1,0 +1,7 @@
+name: Museo Theme
+type: theme
+description: "Tema personalizado para mi catálogo de arte."
+core_version_requirement: ^9 || ^10 || ^11
+base theme: mercury
+libraries:
+  - museo_theme/global-styling
