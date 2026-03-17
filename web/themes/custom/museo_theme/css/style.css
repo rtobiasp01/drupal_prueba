@@ -235,50 +235,6 @@ p {
 }
 
 /* =========================================
-   Componente: Carrusel de Fotos (Splide)
-   ========================================= */
-.mi-carrusel-componente {
-    margin: 4rem 0;
-    width: 100%;
-}
-
-.page-node-type-pagina-de-exposicion .mi-carrusel-componente {
-    /* En lugar de un ancho fijo de 90vw, usamos el ancho dinámico del sitio */
-    width: min(calc(100% - (var(--exposicion-gutter) * 2)), var(--exposicion-max-width));
-    margin-left: auto;
-    margin-right: auto;
-    transform: none;
-    /* Eliminamos el centrado forzado anterior */
-}
-
-.carrusel-titulo {
-    font-size: 30px;
-    padding-bottom: 9px;
-    border-bottom: 1px solid #c4c4c4;
-    margin-bottom: 2rem;
-    font-weight: bold;
-}
-
-.splide__slide {
-    overflow: hidden;
-    border-radius: 8px;
-    /* Un poco más de redondeado queda más moderno */
-}
-
-.splide__slide img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    max-height: 500px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.splide__slide:hover img {
-    transform: scale(1.05);
-}
-
-/* =========================================
    Componente: Hero Banner (Pantalla Completa)
    ========================================= */
 .page-node-type-pagina-de-exposicion header[role="banner"] {
@@ -419,15 +375,5 @@ p {
 @media (max-width: 768px) {
     .cita-texto {
         font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .slide-item {
-        flex: 0 0 calc(33.333% - 14px);
-    }
-
-    .slide-item img {
-        height: 320px;
     }
 }
