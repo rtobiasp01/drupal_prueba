@@ -1,0 +1,16 @@
+{{ attach_library('museo_theme/owl-carousel') }}
+
+<div class="main-carrusel">
+	<div class="titulo-carrusel">
+		{{ content.field_titulo_seccion }}
+	</div>
+	<div class="owl-carousel owl-theme contenido-carrusel">
+		{% for key, item in content.field_imagenes_galeria %}
+
+			{% if key|first != '#' %}
+				<div class="item">{{ item }}</div>
+			{% endif %}
+
+		{% endfor %}
+	</div>
+</div>

@@ -2,3 +2,32 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+
+pagina-exposicion-style:
+  css:
+    theme:
+      css/pagina-exposicion.css: {}
+
+menu-header-style:
+  css:
+    theme:
+      css/menu-header.css: {}
+
+owl-carousel:
+  remote: https://github.com/OwlCarousel2/OwlCarousel2
+  version: 2.3.4
+  license:
+    name: MIT
+    url: https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/owlcarousel/dist/owl.carousel.min.js: {}
+    js/init-carousel.js: {}
+  css:
+    theme:
+      /libraries/owlcarousel/dist/assets/owl.carousel.min.css: {}
+      /libraries/owlcarousel/dist/assets/owl.theme.default.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

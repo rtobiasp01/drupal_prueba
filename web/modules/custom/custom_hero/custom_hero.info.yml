@@ -1,0 +1,5 @@
+name: "Custom Hero Component"
+type: module
+description: "Define un componente Hero Banner usando un Theme Hook personalizado."
+core_version_requirement: ^10 || ^11
+package: Custom

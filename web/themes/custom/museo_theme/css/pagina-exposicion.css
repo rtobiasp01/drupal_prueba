@@ -1,0 +1,341 @@
+body {
+    background-color: #FFFF;
+    color: black;
+    margin: 0;
+}
+
+.container.mx-auto.px-4.pb-4 {
+    display: none;
+}
+
+.region-content {
+    width: 100% !important;
+    max-width: none !important;
+    padding-inline: 0 !important;
+    padding-bottom: 0 !important;
+    margin-inline: 0 !important;
+}
+
+/* Header de la página */
+.header-pagina {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header-pagina-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.header-pagina-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.15) 0%,
+            rgba(0, 0, 0, 0.35) 55%,
+            rgba(0, 0, 0, 0.75) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.header-pagina-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-pagina-titulo {
+    position: absolute;
+    bottom: 5%;
+    left: 20px;
+    z-index: 10;
+    color: #ffffff;
+}
+
+/* Body de la página */
+
+.body-pagina {
+    width: 100%;
+    height: auto;
+    padding-top: 3em;
+}
+
+/* Texto plano */
+
+.texto {
+    text-align: justify;
+    padding-inline: 20%;
+}
+
+/* Cita */
+
+.bloque-cita {
+    padding-inline: 25%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.cita-contenido {
+    display: flex;
+    gap: 5px;
+    font-size: clamp(1.2rem, 2.6vw, 1.9rem);
+    color: grey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.35;
+    flex-wrap: wrap;
+}
+
+.cita-autor {}
+
+/* Carrusel de fotos */
+.main-carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-inline: clamp(12px, 3vw, 40px);
+}
+
+.titulo-carrusel {
+    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.75em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.contenido-carrusel {
+    width: min(1200px, 100%);
+    padding-inline: 0;
+}
+
+.contenido-carrusel .item {
+    padding-inline: clamp(6px, 1vw, 10px);
+}
+
+.contenido-carrusel img {
+    border-radius: 5px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    height: clamp(180px, 34vw, 350px);
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .main-carrusel {
+        padding-inline: clamp(10px, 2.5vw, 24px);
+    }
+
+    .contenido-carrusel img {
+        height: clamp(170px, 38vw, 290px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-carrusel {
+        padding-inline: 10px;
+    }
+
+    .titulo-carrusel {
+        margin-bottom: 0.6em;
+    }
+
+    .contenido-carrusel .item {
+        padding-inline: 4px;
+    }
+
+    .contenido-carrusel img {
+        height: clamp(150px, 52vw, 240px);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-carrusel {
+        padding-inline: 6px;
+    }
+
+    .contenido-carrusel .item {
+        padding-inline: 2px;
+    }
+
+    .contenido-carrusel img {
+        height: clamp(140px, 60vw, 210px);
+    }
+
+}
+
+/* Texto con título */
+.main-texto-con-titulo {
+    padding-inline: 20%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.titulo-texto-con-titulo {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+
+
+/* Texto con imagen */
+
+.main-texto-con-imagen {
+    padding-inline: 20%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuerpo-texto-con-imagen {
+    font-size: 14px;
+}
+
+.imagen-texto-con-imagen {
+    width: min(100%, 560px);
+    margin-inline: auto;
+}
+
+.imagen-texto-con-imagen img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .imagen-texto-con-imagen {
+        width: 100%;
+    }
+
+    .imagen-texto-con-imagen img {
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagen-texto-con-imagen img {
+        border-radius: 4px;
+    }
+}
+
+/* ==========================================================================
+   4. CABECERA (HEADER)
+   ========================================================================== */
+.region-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: transparent;
+}
+
+.header-logo-container,
+.header-menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu-container {
+    margin-left: auto;
+}
+
+#block-museo-theme-marcadelsitio {
+    width: 8rem;
+}
+
+#block-museo-theme-marcadelsitio .branding img {
+    transition: transform 0.3s ease;
+}
+
+.branding img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+#block-museo-theme-menuheader .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#block-museo-theme-menuheader a,
+.btn-galeria {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#block-museo-theme-menuheader a:hover,
+.btn-galeria:hover {
+    background-color: #1f2937;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .texto {
+        padding-inline: 1rem;
+        text-align: left;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+
+    .contenido-texto-con-titulo {
+        padding-inline: 1rem;
+        text-align: left;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+
+    .region-header {
+        padding: 1rem;
+    }
+
+    #block-museo-theme-marcadelsitio {
+        width: 6rem;
+    }
+
+    .btn-galeria {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Custom page template for museo_theme.
+ */
+#}
+<div class="layout-container">
+	<header role="banner" class="region-header">
+		<div class="header-logo-container">
+			{{ page.header.museo_theme_marcadelsitio }}
+		</div>
+
+		<div class="header-menu-container">
+			{{ page.header.museo_theme_menuheader }}
+		</div>
+
+		{{ page.header|without('museo_theme_marcadelsitio', 'museo_theme_menuheader') }}
+
+		{% if not rendered_by_canvas %}
+			<div class="container mx-auto px-4 pb-4">
+				{{ breadcrumb }}
+				{{ title }}
+			</div>
+		{% endif %}
+	</header>
+
+	{{ page.primary_menu }}
+	{{ page.secondary_menu }}
+
+	{{ page.breadcrumb }}
+
+	{{ page.highlighted }}
+
+	{{ page.help }}
+
+	<main role="main">
+		<a id="main-content" tabindex="-1"></a>
+
+		<div class="layout-content">
+			{{ page.content }}
+		</div>
+
+		{% if page.sidebar_first %}
+			<aside class="layout-sidebar-first" role="complementary">
+				{{ page.sidebar_first }}
+			</aside>
+		{% endif %}
+
+		{% if page.sidebar_second %}
+			<aside class="layout-sidebar-second" role="complementary">
+				{{ page.sidebar_second }}
+			</aside>
+		{% endif %}
+	</main>
+
+	{% if page.footer %}
+		<footer role="contentinfo">
+			{{ page.footer }}
+		</footer>
+	{% endif %}
+</div>

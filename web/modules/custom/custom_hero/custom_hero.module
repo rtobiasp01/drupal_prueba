@@ -1,0 +1,15 @@
+<?php
+
+function custom_hero_theme($existing, $type, $theme, $path)
+{
+    return [
+        'hero_banner' => [
+            'variables' => [
+                'titulo' => '',
+                'subtitulo' => '',
+                'url_boton' => '',
+                'texto_boton' => '',
+            ],
+        ],
+    ];
+}

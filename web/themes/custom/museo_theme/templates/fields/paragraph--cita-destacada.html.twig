@@ -1,10 +1,12 @@
-{# Archivo: paragraph--cita-destacada.html.twig #}
 <div class="bloque-cita">
-	<blockquote class="cita-texto">
-		{{ content.field_cita }}
+	<blockquote class="cita-contenido">
+		❝{{ content.field_cita }}
 	</blockquote>
-	{# Si añadiste un campo para el autor, lo imprimiríamos aquí #}
+
 	{% if content.field_autor|render|trim %}
-		<cite class="cita-autor">{{ content.field_autor }}</cite>
+		<cite class="cita-autor">
+			—
+			{{ content.field_autor }}
+		</cite>
 	{% endif %}
 </div>
