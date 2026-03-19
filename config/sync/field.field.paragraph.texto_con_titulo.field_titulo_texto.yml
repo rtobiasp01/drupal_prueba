@@ -1,0 +1,19 @@
+uuid: a69bcaba-b26a-4d8b-85eb-9f03bf2b05a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titulo_texto
+    - paragraphs.paragraphs_type.texto_con_titulo
+id: paragraph.texto_con_titulo.field_titulo_texto
+field_name: field_titulo_texto
+entity_type: paragraph
+bundle: texto_con_titulo
+label: titulo_texto
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

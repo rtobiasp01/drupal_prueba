@@ -19,9 +19,6 @@
 !/web/sites/default/default.services.yml
 
 # --- Archivos Generados por el Usuario ---
-# Nunca subas imágenes, PDFs o estilos CSS generados (agregados)
-/web/sites/*/files
-/web/sites/*/private
 
 # --- Herramientas de Desarrollo y Entorno ---
 .env

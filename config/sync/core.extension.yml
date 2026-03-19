@@ -16,6 +16,7 @@ module:
   content_moderation: 0
   contextual: 0
   crop: 0
+  custom_hero: 0
   cva: 0
   dashboard: 0
   datetime: 0
@@ -65,6 +66,7 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
+  mis_componentes: 0
   modeler_api: 0
   navigation: 0
   navigation_extra_tools: 0
@@ -81,6 +83,7 @@ module:
   scheduler: 0
   scheduler_content_moderation_integration: 0
   search: 0
+  superfish: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0

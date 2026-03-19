@@ -1,0 +1,27 @@
+uuid: 9a45c704-b132-468d-9d2c-5bfe660fb75e
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.menu-desplegable-header
+  module:
+    - system
+active_version: 73cbc58a9e7d5bfb
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:menu-desplegable-header'
+        label: 'Menu Desplegable Header'
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: 'Menu Desplegable Header'
+id: block.system_menu_block.menu-desplegable-header
+provider: system
+source: block
+source_local_id: 'system_menu_block:menu-desplegable-header'

@@ -11,6 +11,7 @@ items:
   - block.system_menu_block.content
   - block.system_menu_block.footer
   - block.system_menu_block.main
+  - block.system_menu_block.menu-desplegable-header
   - block.system_menu_block.menu-header
   - block.system_menu_block.navigation-user-links
   - block.system_menu_block.tools
