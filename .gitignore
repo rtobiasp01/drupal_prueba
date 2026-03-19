@@ -4,7 +4,6 @@
 /web/modules/contrib
 /web/themes/contrib
 /web/profiles/contrib
-/web/libraries
 /vendor
 
 # --- Archivos de Configuración Sensibles ---
