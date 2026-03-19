@@ -4,6 +4,15 @@
 /web/modules/contrib
 /web/themes/contrib
 /web/profiles/contrib
+
+# Ignorar archivos generados por Drupal
+web/sites/default/files/css/
+web/sites/default/files/js/
+web/sites/default/files/php/
+web/sites/default/files/styles/
+
+config/.htaccess
+.ddev/
 /vendor
 
 # --- Archivos de Configuración Sensibles ---
