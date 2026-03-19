@@ -1,0 +1,23 @@
+uuid: 3b6f3fd4-9982-42a1-aebe-30be59eff7ed
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - museo_theme
+id: museo_theme_marcadelsitio
+theme: museo_theme
+region: header
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: Logo
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

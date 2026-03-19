@@ -1,9 +1,0 @@
-uuid: 3d66d17a-158f-408d-bef1-978dbc73dfb0
-langcode: es
-status: true
-dependencies: {  }
-name: 'Componentes Custom'
-configEntityTypeId: component
-weight: 0
-items:
-  - block.custom_hero_block

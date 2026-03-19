@@ -1,0 +1,66 @@
+uuid: 3f69666f-4b15-4bd5-a483-6ca4be687a60
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.obra.field_ano_de_creacion
+    - field.field.node.obra.field_autor
+    - field.field.node.obra.field_descripcion
+    - field.field.node.obra.field_imagen_de_la_obra
+    - field.field.node.obra.field_tecnica
+    - node.type.obra
+  module:
+    - user
+id: node.obra.default
+targetEntityType: node
+bundle: obra
+mode: default
+content:
+  field_ano_de_creacion:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_autor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_descripcion:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_imagen_de_la_obra:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tecnica:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,24 @@
+uuid: 4c738e31-eada-4cd0-b18b-9edb26de095c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cuerpo_texto
+    - paragraphs.paragraphs_type.texto_con_titulo
+  module:
+    - text
+id: paragraph.texto_con_titulo.field_cuerpo_texto
+field_name: field_cuerpo_texto
+entity_type: paragraph
+bundle: texto_con_titulo
+label: 'Cuerpo Texto'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

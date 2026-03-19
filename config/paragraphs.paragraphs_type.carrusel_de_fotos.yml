@@ -1,0 +1,10 @@
+uuid: 2d94b795-1b37-480b-955d-29dc2228c476
+langcode: es
+status: true
+dependencies: {  }
+id: carrusel_de_fotos
+label: 'Carrusel de Fotos'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

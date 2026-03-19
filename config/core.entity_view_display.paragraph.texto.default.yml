@@ -1,0 +1,22 @@
+uuid: 75dc57ca-481b-4518-bba9-bd736228eeb2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texto.field_texto
+    - paragraphs.paragraphs_type.texto
+  module:
+    - text
+id: paragraph.texto.default
+targetEntityType: paragraph
+bundle: texto
+mode: default
+content:
+  field_texto:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

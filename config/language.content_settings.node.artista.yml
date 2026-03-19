@@ -1,0 +1,11 @@
+uuid: 65cf583f-5273-4ab4-b4b2-282ead50573d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.artista
+id: node.artista
+target_entity_type_id: node
+target_bundle: artista
+default_langcode: site_default
+language_alterable: false

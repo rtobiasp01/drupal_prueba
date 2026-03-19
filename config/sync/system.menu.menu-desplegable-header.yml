@@ -1,8 +1,0 @@
-uuid: df8557e7-45a3-4d92-8a10-ad9717fd0a92
-langcode: es
-status: true
-dependencies: {  }
-id: menu-desplegable-header
-label: 'Menu Desplegable Header'
-description: ''
-locked: false

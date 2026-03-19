@@ -1,0 +1,29 @@
+uuid: 55385423-59cb-4b39-b604-b19d0ce9c0a0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tecnica
+    - node.type.obra
+    - taxonomy.vocabulary.tecnicas
+id: node.obra.field_tecnica
+field_name: field_tecnica
+entity_type: node
+bundle: obra
+label: Técnica
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tecnicas: tecnicas
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

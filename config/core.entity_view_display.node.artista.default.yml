@@ -1,0 +1,49 @@
+uuid: 46681790-8c18-48e7-8ccf-3a76595b21ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.artista.field_biografia
+    - field.field.node.artista.field_fecha_de_nacimiento
+    - field.field.node.artista.field_foto_artista
+    - node.type.artista
+  module:
+    - datetime
+    - user
+id: node.artista.default
+targetEntityType: node
+bundle: artista
+mode: default
+content:
+  field_biografia:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_fecha_de_nacimiento:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_foto_artista:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

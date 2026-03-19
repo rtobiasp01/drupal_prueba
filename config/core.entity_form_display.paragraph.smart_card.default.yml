@@ -1,0 +1,59 @@
+uuid: 81aa96ed-13e0-4abd-acb4-aed6e0b0f1e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.smart_card.field_enlace_manual
+    - field.field.paragraph.smart_card.field_imagen_manual
+    - field.field.paragraph.smart_card.field_nodo_referencia
+    - field.field.paragraph.smart_card.field_titulo_manual
+    - paragraphs.paragraphs_type.smart_card
+  module:
+    - link
+    - media_library
+    - tagify
+id: paragraph.smart_card.default
+targetEntityType: paragraph
+bundle: smart_card
+mode: default
+content:
+  field_enlace_manual:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_imagen_manual:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_nodo_referencia:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
+      parent_selection: 1
+    third_party_settings: {  }
+  field_titulo_manual:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

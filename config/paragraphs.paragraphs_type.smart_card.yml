@@ -1,0 +1,10 @@
+uuid: 5bd38103-bf70-4c46-9afc-13dc5de8725a
+langcode: es
+status: true
+dependencies: {  }
+id: smart_card
+label: 'Smart Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,11 @@
+uuid: 8172302b-6c3a-4cf0-9fa7-c0bf2e9d5b31
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.prueba_card_personalizada
+id: node.prueba_card_personalizada
+target_entity_type_id: node
+target_bundle: prueba_card_personalizada
+default_langcode: site_default
+language_alterable: false

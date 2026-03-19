@@ -1,0 +1,20 @@
+uuid: 112a89b1-e948-430d-bc22-0b11b3cbc2cf
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_imagen_de_la_obra
+field_name: field_imagen_de_la_obra
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
