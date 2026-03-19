@@ -197,7 +197,41 @@ p {
 }
 
 /* ==========================================================================
-   5. RESPONSIVE (MÓVILES)
+   5. LAYOUT PRINCIPAL (CONTENIDO + SIDEBAR)
+   ========================================================================== */
+main[role="main"] {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+main[role="main"]>#main-content {
+    position: absolute;
+}
+
+.layout-content {
+    order: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.layout-sidebar-first,
+.layout-sidebar-second {
+    flex: 0 0 320px;
+    width: 320px;
+}
+
+.layout-sidebar-first {
+    order: 0;
+}
+
+.layout-sidebar-second {
+    order: 2;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE (MÓVILES)
    ========================================================================== */
 @media (max-width: 900px) {
     .region-header {
@@ -235,6 +269,17 @@ p {
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
+    }
+
+    main[role="main"] {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .layout-sidebar-first,
+    .layout-sidebar-second {
+        width: 100%;
+        flex-basis: auto;
     }
 }
 

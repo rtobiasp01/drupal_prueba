@@ -1,0 +1,11 @@
+{#
+  Aquí no imprimimos campos como content.field_titulo_manual.
+  Simplemente llamamos a nuestro componente e inyectamos la variable
+  'datos_limpios' que creamos en el archivo PHP (Paso 3).
+#}
+
+{% include '@mis_componentes/smart-card.html.twig' with {
+  titulo: datos_limpios.titulo,
+  url: datos_limpios.url,
+  imagen_url: datos_limpios.imagen_url
+} only %}

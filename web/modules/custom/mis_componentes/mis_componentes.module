@@ -1,0 +1,90 @@
+<?php
+
+function mis_componentes_theme($existing, $type, $theme, $path)
+{
+    return [
+        'smart_card_component' => [
+            'variables' => [
+                'titulo' => NULL,
+                'url' => NULL,
+                'imagen_url' => NULL,
+            ],
+            'template' => 'smart-card',
+        ],
+        'paragraph__smart_card' => [
+            'base hook' => 'paragraph',
+            'template' => 'paragraph--smart-card',
+        ],
+    ];
+}
+
+function mis_componentes_preprocess_paragraph__smart_card(&$variables)
+{
+
+    $paragraph = $variables['paragraph'];
+
+    $titulo = '';
+    $url = '';
+    $imagen_url = '';
+
+    $file_url_generator = \Drupal::service('file_url_generator');
+
+    if (!$paragraph->get('field_nodo_referencia')->isEmpty()) {
+        $nodo = $paragraph->get('field_nodo_referencia')->entity;
+
+        if ($nodo) {
+
+            $titulo = $nodo->getTitle();
+            $url = $nodo->toUrl()->toString();
+
+            if ($nodo->hasField('field_imagen_de_la_obra') && !$nodo->get('field_imagen_de_la_obra')->isEmpty()) {
+                $media_entity = $nodo->get('field_imagen_de_la_obra')->entity;
+
+                $file = null;
+                if ($media_entity instanceof \Drupal\media\MediaInterface) {
+                    $file = $media_entity->get('field_media_image')->entity;
+                } elseif ($media_entity instanceof \Drupal\file\FileInterface) {
+                    $file = $media_entity;
+                }
+
+                if ($file) {
+                    $imagen_url = $file_url_generator->generateString($file->getFileUri());
+                }
+            }
+        }
+    }
+
+    if (!$paragraph->get('field_titulo_manual')->isEmpty()) {
+        $titulo = $paragraph->get('field_titulo_manual')->value;
+    }
+
+    if (!$paragraph->get('field_enlace_manual')->isEmpty()) {
+        $url = $paragraph->get('field_enlace_manual')->first()->getUrl()->toString();
+    }
+
+    if (!$paragraph->get('field_imagen_manual')->isEmpty()) {
+        $file = $paragraph->get('field_imagen_manual')->entity;
+
+        if ($file) {
+            $imagen_url = $file_url_generator->generateString($file->getFileUri());
+        }
+    }
+
+    $variables['datos_limpios'] = [
+        'titulo' => $titulo,
+        'url' => $url,
+        'imagen_url' => $imagen_url,
+    ];
+}
+
+function mis_componentes_theme_suggestions_paragraph_alter(array &$suggestions, array $variables)
+{
+    if (empty($variables['elements']['#paragraph'])) {
+        return;
+    }
+
+    $paragraph = $variables['elements']['#paragraph'];
+    if ($paragraph->bundle() === 'smart_card') {
+        $suggestions[] = 'paragraph__smart_card';
+    }
+}

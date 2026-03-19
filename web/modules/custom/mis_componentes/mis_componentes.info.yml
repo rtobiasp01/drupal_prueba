@@ -1,0 +1,5 @@
+name: "Mis Componentes"
+type: module
+description: "Provee componentes UI personalizados y lógica de preprocesamiento (Smart Card)."
+core_version_requirement: ^10 || ^11
+package: Custom
